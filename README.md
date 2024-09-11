@@ -1,0 +1,2 @@
+# SmartGnomikLib
+Smart Home Controller
