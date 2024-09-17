@@ -43,7 +43,7 @@ class PC():
             self.turn_on()
         elif request == "turn_off" or request == "off":
             self.turn_off()
-        elif request == "reboot" or request == restart:
+        elif request == "reboot" or request == "restart":
             self.reboot()
         else:
             client = paramiko.SSHClient()
@@ -53,3 +53,6 @@ class PC():
             client.close()
             self.gnomik.command_executed = True
             self.gnomik.blink_LED()
+
+    def add_command(self, action_words, command):
+        self.gnomik.add_command(self, action_words, command)

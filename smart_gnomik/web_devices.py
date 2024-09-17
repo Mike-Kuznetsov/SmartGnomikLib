@@ -1,3 +1,5 @@
+import requests
+
 class WebDevice():
     
     def __init__(self, gnomik, ip, device_names):
@@ -29,6 +31,6 @@ class WebDevice():
         self.gnomik.command_executed = True
         self.gnomik.blink_LED()"""
 
-    def add_command(self, action_words, command):
-        self.gnomik.add_command(self, action_words, command)
+    def add_command(self, action_words, web_request):
+        self.gnomik.add_command(self, action_words, web_request)
         
