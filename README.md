@@ -141,4 +141,4 @@ esp2.add_command(action_words=["выкл"], web_request = 'turn_off')
 
 sg.start()
 ```
-
+Перед запуском Bash-скриптов (.sh) необходимо давать им права на выполнение командой "chmod +x [НАЗВАНИЕ СКРИПТА]"
