@@ -101,7 +101,7 @@
       5. Написать команду "visudo" и прописать внизу "[ИМЯ ПОЛЬЗОВАТЕЛЯ] ALL=(ALL:ALL) NOPASSWD:/usr/bin/sg_autostart.sh"
       ```
    </details>
-### Пример программы
+### Пример программы:
 ```
 from smart_gnomik import SmartGnomik
 
