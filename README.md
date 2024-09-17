@@ -98,7 +98,6 @@
       5. Написать команду "visudo" и прописать внизу "[ИМЯ ПОЛЬЗОВАТЕЛЯ] ALL=(ALL:ALL) NOPASSWD:/usr/bin/sg_autostart.sh"
       ```
    </details>
-   
-8. 
+
 
 
