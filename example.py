@@ -5,7 +5,7 @@ activation_words = ['гном']
 
 sg = SmartGnomik(model_name, activation_words)
 #sg.set_activation_words(activation_words)
-sg.set_dir(r'/home/orangepi/Desktop/SmartGnomik/smart_gnomik')
+sg.set_dir(r'/home/orangepi/Desktop/SmartGnomik/libs')
 sg.set_orangepi_LED(model="PC2", pin=7)
 
 ip = "192.168.0.1"
