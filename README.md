@@ -33,7 +33,13 @@
    </details>
 5. <details> 
       <summary>Включение автоматического входа в ОС без ввода пароля</summary>
-      Допишу позже
+      Решение для Lubuntu: Создать файл /etc/sddm.conf со следующим содержимым:
+      ```
+      [Autologin]      
+      User=[ВАШЕ ИМЯ ПОЛЬЗОВАТЕЛЯ]      
+      Session=Lubuntu.desktop      
+      Relogin=true      
+      ```
    </details>
 
 
