@@ -1,138 +1,140 @@
 ﻿# SmartGnomikLib
 ### Smart Home Controller
 
-This library helps you to control smart devices via voice commands.     
+This library lets you control your smart devices via voice commands.     
 As a controller device you can use Orange Pi or Raspberry Pi.
+Also you can make non-smart devices smart by installing ESP8266/ESP32 in them.
 
 Vids about library and devices are here [Russian]: https://youtube.com/@ESPdev      
-Main channel [Russian]: https://youtube.com/c/mautoztech
+Main channel [Russian]: https://youtube.com/c/MautozTech
 
 ### Using this library you can control different types of devices:
 - Devices that can be controlled via GET-requests (web-requests)      
-  (for example you can make your non-smart devices smart using ESP8266/ESP32 boards)
+  (for example ESP8266/ESP32 boards/devices)
 - Devices compatible with Tuya platform
 - PC
 
-Образ настроенной ОС с настроенной программой для Orange Pi PC2 (и совместимых с ней плат): [Google Drive](https://drive.google.com/file/d/128jVv7pF3YjIEn2ycC7YM1Svyow9LUSr)      
-Хочу отметить, что предустановленная программа может быть не последней версии.      
+Image with preconfigured Armbian and program for Orange Pi PC2 (and other compatible devices): [Google Drive](https://drive.google.com/file/d/128jVv7pF3YjIEn2ycC7YM1Svyow9LUSr)      
 
-Поддержать разработчика / Бесплатные инвестиционные лайфхаки: https://pomoex.ru
+Support developer / Free investment lifehacks [Russian]: https://pomoex.ru
 
-### Создание карты памяти и подготовка ОС:
+### Installing and configuring OS:
 1. <details> 
-      <summary>Скачивание дистрибутива Armbian или другой ОС</summary>
+      <summary>Download Armbian (or another) image</summary>
   
       ```
-      Голая Armbian 20.08 как у меня: https://drive.google.com/file/d/1FFzEcmnzOcK9rwSuBZPOyZdQ0BdvRMhi
+      Armbian 20.08 like mine: https://drive.google.com/file/d/1FFzEcmnzOcK9rwSuBZPOyZdQ0BdvRMhi
       ```
    </details>
 2. <details> 
-      <summary>При необходимости: настройка частоты процессора</summary>
+      <summary>If you want: Configure CPU frequency</summary>
   
       ```
-      Введите команду "armbian-config", выберите System >> CPU Frequency.
-      У меня минимальная 480 МГц и максимальная 1200 МГц с настройкой "On demand", максимальную можно ставить и выше.
+      Use command "armbian-config", select System >> CPU Frequency.
+      I set min freq. to 480 MHz, max freq. to 1200 MHz and "On demand" mode, you can set higher max freq.
       ```
    </details> 
 3. <details> 
-      <summary>При необходимости: установка графической оболочки</summary>
+      <summary>If you want: Install desktop environment</summary>
 
       ```
-      Если скачали ОС без графической оболочки, то для удобства можете её установить, прописав команды:
+      If you've downloaded OS without desktop environment, you can install it using commands:
       "apt update"
       "apt install lubuntu-desktop -y"
       ```
    </details> 
 4. <details> 
-      <summary>Включение микрофона</summary>
+      <summary>Turn on microphone</summary>
 
       ```
-      Если не работает микрофон на OrangePi, то пропишите "alsamixer", нажмите F4, стрелками выберите микрофон и нажмите пробел чтобы его включить.
-      Если там есть два микрофона, можете включить оба. Потом нажимаете CTRL+S чтобы сохранить настройки и CTRL+C чтобы закрыть программу.
+      If your built-in OrangePi mic doesn't work, execute "alsamixer" command, press F4, select mic using arrows and press space to turn it on.
+      If there are two mics, you can turn on both. Then press CTRL+S to save and CTRL+C to close the alsamixer.
       ```
    </details>
 5. <details> 
-      <summary>Проверка микрофона</summary>
+      <summary>Check the microphone</summary>
   
       ```
-      Для проверки микрофона можете подключить наушники к OrangePi и ввести в терминал "arecord | aplay",
-      звук с микрофона будет проигрываться в наушниках.
+      To check the microphone connect headphones to an OrangePi and use "arecord | aplay" command,
+      sound from microphone will play in your headphones.
       ```
    </details>
 6. <details> 
-      <summary>Включение автоматического входа в ОС без ввода пароля</summary>
-      - Решение для Lubuntu: Создать файл /etc/sddm.conf со следующим содержимым:
+      <summary>Turn on autologin without password</summary>
+      - Solution for Lubuntu: Create "/etc/sddm.conf" file with following content:
   
       ```
       [Autologin]      
-      User=[ВАШЕ ИМЯ ПОЛЬЗОВАТЕЛЯ]      
+      User=[YOUR USERNAME]      
       Session=Lubuntu.desktop      
       Relogin=true      
       ```
    </details>
    
-### Скачивание и настройка программы:
-1. Скачивание библиотеки, распаковка архива
-2. Запуск файла setup.sh
+### Downloading and configuring the program:
+1. Download this library, unpack an archive
+2. Start setup.sh
 3. <details> 
-      <summary>Скачивание голосовой модели</summary>
+      <summary>Download language model</summary>
       
       ```
-      Модель слишком тяжелая для загрузки на Github, 40 мб. Поэтому надо скачивать самостоятельно.
-      Папку с моделью надо поместить в папку с программой (например с example.py)
-      Ссылка: https://alphacephei.com/vosk/models
-      Название необходимой модели: "vosk-model-small-ru-0.22" (или новее если будет)
+      Model is too heavy for Github, 40 MB. So you need to download it buy yourself.
+      You need to put directory with model into directory with program (for example with example.py)
+      Link: https://alphacephei.com/vosk/models
+      Name of the model i use: "vosk-model-small-ru-0.22" (you can choose English but it has to be small enough to be used on your device)
       ```
     </details>   
-5. Написание кода или редактирование example.py
+5. Write the code or edit example.py
 6. <details> 
-      <summary>Настройка автозапуска программы</summary>
-      - В Lubuntu это делается в Session Settings, там необходимо добавить следующую команду в автозапуск. Если у вас другой путь к папке, измените.
+      <summary>Configure program auto-start</summary>
+      - In Lubuntu you can do it in Session Settings, you need to add the following command in auto-start. If you have different path to a program, change it.
   
       ```
       cd /home/orangepi/Desktop/SmartGnomik && python3 example.py
       ```
    </details>
 7. <details> 
-      <summary>Настройка мигания светодиода</summary>
+      <summary>Configure LED blinking</summary>
   
       ```
-      Работает только на Orange Pi, потому что у меня нет Raspberry Pi для написания кода/тестирования.
-      Если у вас Raspberry Pi и вы хотите чтобы светодиод мигал после выполнения команды, вы можете отредактировать код библиотеки.
+      LED will blink 3 times after command execution
+      It works only on Orange Pi because i don't have Raspberry Pi to write a code for it and to test it.
+      If you have Raspberry Pi and you want your LED to blink you can edit the library to fit your needs.
       
-      Для управления GPIO контактами (и мигания светодиодом) программа должна иметь root-доступ.
-      Поэтому по-хорошему нужно:
-      1. Сделать root владельцем всей папки (chown -R root [НАЗВАНИЕ ПАПКИ])
-      2. Установить параметры доступа (chmod -R 755 [НАЗВАНИЕ ПАПКИ])
-      3. Написать скрипт который будет запускать программу (например example.py)
-         и поместить этот скрипт в директорию /usr/bin (sg_autostart.sh - пример скрипта)
-      4. Добавить этот скрипт в автозапуск (В Lubuntu это делается в "Session settings").
-         Команда, которая должна исполняться - "sudo sg_autostart.sh"
-      5. Написать команду "visudo" и прописать внизу
-         "[ИМЯ ПОЛЬЗОВАТЕЛЯ] ALL=(ALL:ALL) NOPASSWD:/usr/bin/sg_autostart.sh"
+      To control GPIO contacts (and to make LED blinking) program must have root access.
+      The right way to do this:
+      1. Make root user owner of entire directory (chown -R root [DIR NAME or PATH])
+      2. Set access settings (chmod -R 755 [DIR NAME or PATH])
+      3. Create a script which will start your program
+         and put this script into "/usr/bin" dir (sg_autostart.sh - example of a script)
+      4. Add your script to auto-start list (In Lubuntu you can do it in "Session settings").
+         Command that needs to be executed on start - "sudo sg_autostart.sh"
+      5. Use "visudo" command and add to the end of the file:
+         "[YOUR USENAME] ALL=(ALL:ALL) NOPASSWD:/usr/bin/sg_autostart.sh"
       ```
    </details>
-### Пример программы:
+### Program example (with russian model/words but code is the same):
 ```
 from smart_gnomik import SmartGnomik
 
-model_name = "vosk-model-small-ru-0.22" # Название модели, папка с моделью должна быть там же где и программа
-activation_words = ['гном'] # Слово (слова) при произнесении которого активируется распознавание (типа "Окей гугл")
+model_name = "vosk-model-small-ru-0.22" # Name of the voice model. Directory with model should be in the same directory where this program is.
+activation_words = ['гном'] # Word after saying which voice recognition activates. Like "Okay google"
 
 sg = SmartGnomik(model_name, activation_words)
 
-# Можно поменять слова-активаторы
 # sg.set_activation_words(activation_words)
 
-# Можно поменять путь к библиотеке Tuya и другим библиотекам если они у вас не в папке "libs".
+# You can specify the path to the Tuya lib and other libs if they are not in the "{current dir}/libs" directory.
 # sg.set_dir(r'/home/orangepi/Desktop/SmartGnomik/libs')
 
-# Мигание после выполнения команды работает только на Orange Pi
-# Модели: PC2, ZERO, ZEROPLUS2H5, ZEROPLUS2H3, PCPCPLUS, PRIME
-# Если вашей модели нет в списке, то можете попробовать мигать встроенным светодиодом
-# Для этого необходимо вызвать функцию без передачи названия модели и пина
+# If you call this function LED will blink after command execution
+# Works only with Orange Pi. You need to change the library if you want to work it with Raspberry.
+# Models: PC2, ZERO, ZEROPLUS2H5, ZEROPLUS2H3, PCPCPLUS, PRIME
+# If your model is not on the list you can try to use built-in LED
+# To do this call this function without specifying model and pin
 sg.set_orangepi_LED(model="PC2", pin=7) 
 
+# The library uses paramiko and wake-on-lan to control your PC
 ip = "192.168.0.1"
 device_names = ["комп"] # КОМПьютер
 mac_addr = "AA:BB:CC:DD:EE:FF"
@@ -143,6 +145,7 @@ pc.add_command(action_words=["вкл"], command = 'turn_on')
 pc.add_command(action_words=["выкл"], command = 'turn_off')
 pc.add_command(action_words=["резаг"], command = 'reboot') #пеРЕЗАГрузи
 
+# The library uses C#lib TuyaNet by Alexey Clusterrr to control Tuya devices
 ip = "192.168.0.2"
 device_names = ["розет"] # РОЗЕТка
 local_key = "Local_Key"
@@ -162,20 +165,21 @@ esp2.add_command(action_words=["выкл"], web_request = 'turn_off')
 sg.start()
 ```
 
-### Планы на будущее:
+### Future plans:
 1. <details> 
-      <summary>Добавить библиотеку в pip</summary>
+      <summary>Integrate this library into pip</summary>
   
       ```
-      Это не было сделано сразу потому что есть зависимости которые необходимо устанавливать через apt.
-      Pip не может это делать автоматически и я посчитал что пользователям будет проще загружать библиотеку
-      напрямую с Github и запускать скрипт setup.sh который сам всё сделает.
+      It hasn't been done from the start because there are dependencies that needed to be installed manually via apt.
+      Pip can't do this automatically and i thought it would be easier for users to download this library
+      from Github and execute setup.sh script that will install everything.
       ```
-2. Упростить написание сложных скриптов
-3. Добавить возможность управлять устройствами из интернета
-4. Описание на английском
+2. Make writing complicated scripts easier
+3. Make the feature that will allow to control your devices via global internet and not just via voice.
 
-### Дополнительно:
-- Перед запуском Bash-скриптов (.sh) необходимо давать им права на выполнение командой      
-"chmod +x [НАЗВАНИЕ СКРИПТА]"
-- Поддержать разработчика / Бесплатные инвестиционные лайфхаки: https://pomoex.ru
+### In addition:
+- Before executing bash scripts (.sh) you need to make them executable using command:
+"chmod +x [NAME OF THE SCIPT]"
+- Support developer / Free investment lifehacks [Russian]: https://pomoex.ru
+- Contact me: mikesprogramms@gmail.com
+- I will try to also keep english version of the description updated
