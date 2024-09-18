@@ -1,17 +1,17 @@
 ﻿# SmartGnomikLib
 ### Smart Home Controller
 
-Библиотека для голосового управления умными устройствами.      
-В качестве устройства-контроллера можно использовать Orange Pi или Raspberry Pi.
+This library helps you to control smart devices via voice commands.     
+As a controller device you can use Orange Pi or Raspberry Pi.
 
-Видео про библиотеку и устройства тут: https://youtube.com/@ESPdev      
-Основной канал: https://youtube.com/c/mautoztech
+Vids about library and devices are here [Russian]: https://youtube.com/@ESPdev      
+Main channel [Russian]: https://youtube.com/c/mautoztech
 
-### С её помощью можно управлять:
-- Любыми устройствами управляемыми с помощью GET-запросов      
-  (например самодельными устройствами на ESP8266/ESP32)
-- Устройствами совместимыми с платформой Tuya
-- Компьютером
+### Using this library you can control different types of devices:
+- Devices that can be controlled via GET-requests (web-requests)      
+  (for example you can make your non-smart devices smart using ESP8266/ESP32 boards)
+- Devices compatible with Tuya platform
+- PC
 
 Образ настроенной ОС с настроенной программой для Orange Pi PC2 (и совместимых с ней плат): [Google Drive](https://drive.google.com/file/d/128jVv7pF3YjIEn2ycC7YM1Svyow9LUSr)      
 Хочу отметить, что предустановленная программа может быть не последней версии.      
