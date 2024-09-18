@@ -111,13 +111,22 @@
 ```
 from smart_gnomik import SmartGnomik
 
-model_name = "vosk-model-small-ru-0.22"
-activation_words = ['гном']
+model_name = "vosk-model-small-ru-0.22" # Название модели, папка с моделью должна быть там же где и программа
+activation_words = ['гном'] # Слово (слова) при произнесении которого активируется распознавание (типа "Окей гугл")
 
 sg = SmartGnomik(model_name, activation_words)
-#sg.set_activation_words(activation_words)
-sg.set_dir(r'/home/orangepi/Desktop/SmartGnomik/libs')
-sg.set_orangepi_LED(model="PC2", pin=7)
+
+# Можно поменять слова-активаторы
+# sg.set_activation_words(activation_words)
+
+# Можно поменять путь к библиотеке Tuya и другим библиотекам если они у вас не в папке "libs".
+# sg.set_dir(r'/home/orangepi/Desktop/SmartGnomik/libs')
+
+# Мигание после выполнения команды работает только на Orange Pi
+# Модели: PC2, ZERO, ZEROPLUS2H5, ZEROPLUS2H3, PCPCPLUS, PRIME
+# Если вашей модели нет в списке, то можете попробовать мигать встроенным светодиодом
+# Для этого необходимо вызвать функцию без передачи названия модели и пина
+sg.set_orangepi_LED(model="PC2", pin=7) 
 
 ip = "192.168.0.1"
 device_names = ["комп"] # КОМПьютер
