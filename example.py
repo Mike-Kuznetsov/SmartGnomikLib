@@ -5,7 +5,8 @@ activation_words = ['гном']
 
 sg = SmartGnomik(model_name, activation_words)
 #sg.set_activation_words(activation_words)
-sg.set_dir(r'/home/orangepi/Desktop/SmartGnomik/libs')
+# You can specify the path to the Tuya lib and other libs if they are not in the "libs" directory. Default path is "{current folder}/libs"
+#sg.set_dir(r'/home/orangepi/Desktop/SmartGnomik/libs') 
 sg.set_orangepi_LED(model="PC2", pin=7)
 
 ip = "192.168.0.1"
