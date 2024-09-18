@@ -18,6 +18,14 @@ Image with preconfigured Armbian and program for Orange Pi PC2 (and other compat
 
 Support developer / Free investment lifehacks [Russian]: https://pomoex.ru
 
+### How to build/configure devices [Russian]:
+- [DIY Smart Lamp](https://www.youtube.com/watch?v=LqcxTVnJerQ)
+- [Controlling AC using voice commands](https://www.youtube.com/watch?v=OrqkeDkkqKg)
+- [Controlling PC using voice commands](https://www.youtube.com/watch?v=hH3e1tUTVxI)
+- [DIY Smart House Heater](https://www.youtube.com/watch?v=1qQIQP5o4bY)
+- [Controlling your smart devices with voice using OrangePi and Python (+ about Tuya)](https://www.youtube.com/watch?v=Uk_LlI7Qcqw)
+- [Orange Pi - Blinking LED](https://www.youtube.com/watch?v=lKjLFaw47dM)
+
 ### Installing and configuring OS:
 1. <details> 
       <summary>Download Armbian (or another) image</summary>
