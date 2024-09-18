@@ -1,4 +1,5 @@
 # SmartGnomikLib
+[English readme](https://github.com/Mike-Kuznetsov/SmartGnomikLib/blob/main/english_readme.md)
 ### Smart Home Controller
 
 Библиотека для голосового управления умными устройствами.      
