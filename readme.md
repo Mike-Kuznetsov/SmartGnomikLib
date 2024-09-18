@@ -20,6 +20,14 @@
 
 Поддержать разработчика / Бесплатные инвестиционные лайфхаки: https://pomoex.ru
 
+### Как собрать/настроить устройства:
+- [Умная люстра своими руками](https://www.youtube.com/watch?v=LqcxTVnJerQ)
+- [Голосовое управление кондиционером](https://www.youtube.com/watch?v=OrqkeDkkqKg)
+- [Голосовое управление компьютером](https://www.youtube.com/watch?v=hH3e1tUTVxI)
+- [Умная батарея своими руками](https://www.youtube.com/watch?v=1qQIQP5o4bY)
+- [Голосовое управление умными устройствами своими руками (+ про Tuya)](https://www.youtube.com/watch?v=Uk_LlI7Qcqw)
+- [Мигание светодиодом](https://www.youtube.com/watch?v=lKjLFaw47dM)
+
 ### Установка и подготовка ОС:
 1. <details> 
       <summary>Скачивание дистрибутива Armbian или другой ОС</summary>
