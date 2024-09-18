@@ -13,7 +13,7 @@
 - Устройствами совместимыми с платформой Tuya
 - Компьютером
 
-Образ настроенной ОС с настроенной программой для Orange Pi PC2 (и совместимых с ней плат): [Google Drive](https://drive.google.com/file/d/1bjumnH2Hv2xlWecRSoOOCXUW6J5NqSU4)      
+Образ настроенной ОС с настроенной программой для Orange Pi PC2 (и совместимых с ней плат): [Google Drive](https://drive.google.com/file/d/128jVv7pF3YjIEn2ycC7YM1Svyow9LUSr)      
 Хочу отметить, что предустановленная программа может быть не последней версии.      
 
 Поддержать разработчика / Бесплатные инвестиционные лайфхаки: https://pomoex.ru
