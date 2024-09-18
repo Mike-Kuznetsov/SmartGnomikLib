@@ -18,7 +18,7 @@ Image with preconfigured Armbian and program for Orange Pi PC2 (and other compat
 
 Support developer / Free investment lifehacks [Russian]: https://pomoex.ru
 
-### How to build/configure devices [Russian]:
+### How to build/configure devices [Youtube / Russian]:
 - [DIY Smart Lamp](https://www.youtube.com/watch?v=LqcxTVnJerQ)
 - [Controlling AC using voice commands](https://www.youtube.com/watch?v=OrqkeDkkqKg)
 - [Controlling PC using voice commands](https://www.youtube.com/watch?v=hH3e1tUTVxI)
