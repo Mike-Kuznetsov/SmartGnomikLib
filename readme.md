@@ -20,7 +20,7 @@
 
 Поддержать разработчика / Бесплатные инвестиционные лайфхаки: https://pomoex.ru
 
-### Как собрать/настроить устройства:
+### Как собрать/настроить устройства (YouTube):
 - [Умная люстра своими руками](https://www.youtube.com/watch?v=LqcxTVnJerQ)
 - [Голосовое управление кондиционером](https://www.youtube.com/watch?v=OrqkeDkkqKg)
 - [Голосовое управление компьютером](https://www.youtube.com/watch?v=hH3e1tUTVxI)
