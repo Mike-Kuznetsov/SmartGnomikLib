@@ -189,3 +189,9 @@ sg.start()
 "chmod +x [НАЗВАНИЕ СКРИПТА]"
 - Поддержать разработчика / Бесплатные инвестиционные лайфхаки: https://pomoex.ru
 - Связаться со мной: mikesprogramms@gmail.com
+
+### Проект использует:
+[Vosk](https://github.com/alphacep/vosk-api) - для распознавания голоса      
+[TuyaNet](https://github.com/ClusterM/tuyanet) - для взаимодействия с устройствами Tuya      
+[PyWakeOnLAN](https://github.com/remcohaszing/pywakeonlan) и [Paramiko](https://github.com/paramiko/paramiko) - для управления компьютером      
+Остальные зависимости можно посмотреть в файле setup.sh      
