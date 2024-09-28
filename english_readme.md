@@ -191,3 +191,9 @@ sg.start()
 - Support developer / Free investment lifehacks [Russian]: https://pomoex.ru
 - Contact me: mikesprogramms@gmail.com
 - I will try to also keep english version of the description updated
+
+### Project uses:
+[Vosk](https://github.com/alphacep/vosk-api) - to recognize voice      
+[TuyaNet](https://github.com/ClusterM/tuyanet) - to control Tuya devices      
+[PyWakeOnLAN](https://github.com/remcohaszing/pywakeonlan) и [Paramiko](https://github.com/paramiko/paramiko) - to control PCs          
+Other dependencies you can find in the setup.sh file     
