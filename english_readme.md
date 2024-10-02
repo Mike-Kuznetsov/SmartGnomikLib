@@ -14,6 +14,11 @@ Main channel [Russian]: https://youtube.com/c/MautozTech
 - Devices compatible with Tuya platform
 - PC
 
+### Why to use this library and not something else:
+- Your data does not leave your home network
+- Fast response to commands
+- Unlimited customization abilities
+
 Image with preconfigured Armbian and program for Orange Pi PC2 (and other compatible devices): [Google Drive](https://drive.google.com/file/d/128jVv7pF3YjIEn2ycC7YM1Svyow9LUSr)      
 
 Support developer / Free investment lifehacks [Russian]: https://pomoex.ru
