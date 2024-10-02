@@ -6,8 +6,9 @@
 В качестве устройства-контроллера можно использовать Orange Pi или Raspberry Pi.
 Вы можете также сами переделать свои не-умные устройства в умные с помощью ESP8266/ESP32, мои видео вам помогут.
 
-Видео про библиотеку и устройства тут: https://youtube.com/@ESPdev      
-Основной канал: https://youtube.com/c/MautozTech
+[Видео про библиотеку](https://www.youtube.com/watch?v=b9HwBJCooCI)      
+[Канал Заметки ESPшника](https://www.youtube.com/@ESPdev)      
+[Канал MautozTech](https://www.youtube.com/c/MautozTech)      
 
 ### Библиотека позволяет управлять:
 - Любыми устройствами управляемыми с помощью GET-запросов      
